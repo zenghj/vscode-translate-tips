@@ -24,11 +24,11 @@
 				"translate-tips.localeFilePath": {
 					"type": "string",
           "default": null,
-          "description": "locale file absolute path, support .js and .json file"
+          "description": "absolute path of locale file, support .js、.json、.jsx, .ts、.tsx file"
 				},
 				"translate-tips.keyReg": {
           "type": "string",
-          "description": "pattern to match word need show tips",
+          "description": "pattern to match words for those need show tips",
 					"default": "*"
 				}
 			}
@@ -40,8 +40,12 @@
 		"lint": "eslint src --ext ts",
 		"watch": "tsc -watch -p ./",
 		"pretest": "yarn run compile && yarn run lint",
-		"test": "node ./out/test/runTest.js"
-	},
+    "test": "node ./out/test/runTest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenghj/vscode-translate-tips.git"
+  },
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
