@@ -2,7 +2,7 @@
 	"name": "translate-tips",
 	"displayName": "translate-tips",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
@@ -10,8 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-    "onLanguage:javascript",
-    "onLanguage:vue"
+		"onLanguage:javascript",
+		"onLanguage:vue"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -23,12 +23,12 @@
 			"properties": {
 				"translate-tips.localeFilePath": {
 					"type": "string",
-          "default": null,
-          "description": "absolute path of locale file, support .js、.json、.jsx, .ts、.tsx file"
+					"default": null,
+					"description": "absolute path of locale file, support .js、.json、.jsx, .ts、.tsx file"
 				},
 				"translate-tips.keyReg": {
-          "type": "string",
-          "description": "pattern to match words for those need show tips",
+					"type": "string",
+					"description": "pattern to match words for those need show tips",
 					"default": "*"
 				}
 			}
@@ -36,16 +36,17 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
+		"publish": "vsce publish",
 		"compile": "tsc -p ./",
 		"lint": "eslint src --ext ts",
 		"watch": "tsc -watch -p ./",
 		"pretest": "yarn run compile && yarn run lint",
-    "test": "node ./out/test/runTest.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zenghj/vscode-translate-tips.git"
-  },
+		"test": "node ./out/test/runTest.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zenghj/vscode-translate-tips.git"
+	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
@@ -61,6 +62,6 @@
 	},
 	"dependencies": {
 		"chokidar": "^3.4.0"
-  },
-  "publisher": "Julianzeng"
+	},
+	"publisher": "Julianzeng"
 }

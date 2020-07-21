@@ -16,7 +16,7 @@ function setLocalesJson(file:string) {
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "test" is now active!');
   const config = vscode.workspace.getConfiguration('translate-tips');
-  const keyReg = config.get('keyReg') && new RegExp(config.get('keyReg') || '*');
+  const keyReg = config.get('keyReg') && new RegExp(config.get('keyReg') || '.*');
   const localeFilePath = config.get('localeFilePath');
   console.log('keyReg: ', keyReg, 'localeFilePath: ', localeFilePath);
   if (!keyReg || !localeFilePath) {
