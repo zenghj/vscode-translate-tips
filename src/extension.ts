@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
             if (tips != null) {
               return new vscode.Hover(`${tips}`);
             } else {
-              return new vscode.Hover('null');
+              // return new vscode.Hover('null');
             }
           }
         }

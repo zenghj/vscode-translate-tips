@@ -2,7 +2,7 @@
 	"name": "translate-tips",
 	"displayName": "translate-tips",
 	"description": "",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
@@ -24,12 +24,12 @@
 				"translate-tips.localeFilePath": {
 					"type": "string",
 					"default": null,
-					"description": "absolute path of locale file, support .js、.json、.jsx, .ts、.tsx file"
+					"description": "absolute path of locale file, support .js、.json file"
 				},
 				"translate-tips.keyReg": {
 					"type": "string",
 					"description": "pattern to match words for those need show tips",
-					"default": "*"
+					"default": ".*"
 				}
 			}
 		}

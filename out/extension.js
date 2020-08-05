@@ -38,7 +38,7 @@ function activate(context) {
                         return new vscode.Hover(`${tips}`);
                     }
                     else {
-                        return new vscode.Hover('null');
+                        // return new vscode.Hover('null');
                     }
                 }
             }
