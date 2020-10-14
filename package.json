@@ -24,7 +24,7 @@
 				"translate-tips.localeFilePath": {
 					"type": "string",
 					"default": null,
-					"description": "absolute path of locale file, support .js、.json file"
+					"description": "path of locale file(an absolute path or relative to current workspace), support .js、.json file"
 				},
 				"translate-tips.keyReg": {
 					"type": "string",

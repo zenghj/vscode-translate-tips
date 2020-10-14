@@ -1,10 +1,16 @@
 import * as vscode from 'vscode';
 import * as chokidar from 'chokidar';
+import * as path from 'path';
 import { cleanModuleCache } from './util/index';
 let localesJson:any = {};
 
+const projectRootPath = vscode.workspace.rootPath;
+
 
 function setLocalesJson(file:string) {
+  if (!path.isAbsolute(file) && projectRootPath) {
+    file = path.resolve(projectRootPath, file);
+  }
   localesJson = require(file);
   chokidar.watch(file)
     .on('change', (event, path) => {

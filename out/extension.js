@@ -3,9 +3,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 const vscode = require("vscode");
 const chokidar = require("chokidar");
+const path = require("path");
 const index_1 = require("./util/index");
 let localesJson = {};
+const projectRootPath = vscode.workspace.rootPath;
 function setLocalesJson(file) {
+    if (!path.isAbsolute(file) && projectRootPath) {
+        file = path.resolve(projectRootPath, file);
+    }
     localesJson = require(file);
     chokidar.watch(file)
         .on('change', (event, path) => {

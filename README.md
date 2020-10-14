@@ -14,7 +14,7 @@ Show translated text for develop convinience.
 
 This extension contributes the following settings:
 
-* `translate-tips.localeFilePath`: absolute path of locale file, support .js、.json、.jsx, .ts、.tsx file
+* `translate-tips.localeFilePath`: path of locale file(an absolute path or relative to current workspace), support .js、.json file
 * `translate-tips.keyReg`: pattern to match word need show tips, default value is `.*`
 
 ## Known Issues
