@@ -1,5 +1,7 @@
-on: push
 name: "Release Vscode Plugin "
+on: push
+  branches:
+    - master
 jobs:
   npmInstall:
     name: npm install
