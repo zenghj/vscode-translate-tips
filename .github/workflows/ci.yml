@@ -1,4 +1,4 @@
-name: "Release Vscode Plugin "
+name: Release Vscode Plugin
 on: push
   branches:
     - master
